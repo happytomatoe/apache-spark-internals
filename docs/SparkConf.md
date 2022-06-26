@@ -60,19 +60,16 @@ There are the following places where a Spark application looks for Spark propert
 == [[default-configuration]] Default Configuration
 
 The default Spark configuration is created when you execute the following code:
-
-[source, scala]
+```scala mdoc
 ----
 import org.apache.spark.SparkConf
 val conf = new SparkConf
 ----
-
+```
 It simply loads `spark.*` system properties.
 
 You can use `conf.toDebugString` or `conf.getAll` to have the `spark.*` system properties loaded printed out.
-
-[source, scala]
-----
+```scala mdoc
 scala> conf.getAll
 res0: Array[(String, String)] = Array((spark.app.name,Spark shell), (spark.jars,""), (spark.master,local[*]), (spark.submit.deployMode,client))
 
@@ -88,14 +85,12 @@ spark.app.name=Spark shell
 spark.jars=
 spark.master=local[*]
 spark.submit.deployMode=client
-----
-
+```
 == [[getAppId]] Unique Identifier of Spark Application -- getAppId Method
 
-[source, scala]
-----
+```scala mdoc
 getAppId: String
-----
+```
 
 getAppId returns the value of configuration-properties.md#spark.app.id[spark.app.id] configuration property or throws a `NoSuchElementException` if not set.
 
