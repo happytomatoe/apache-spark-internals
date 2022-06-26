@@ -61,10 +61,8 @@ There are the following places where a Spark application looks for Spark propert
 
 The default Spark configuration is created when you execute the following code:
 ```scala mdoc
-----
 import org.apache.spark.SparkConf
 val conf = new SparkConf
-----
 ```
 It simply loads `spark.*` system properties.
 
